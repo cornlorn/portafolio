@@ -1,18 +1,18 @@
-import { defineConfig } from 'vite';
-import purgecss from 'vite-plugin-purgecss';
+import { defineConfig } from "vite";
+import purgecss from "vite-plugin-purgecss";
 
 export default defineConfig({
-    build: {
-        outDir: 'dist',
+  build: {
+    outDir: "dist",
+  },
+  css: {
+    preprocessorOptions: {
+      less: {},
     },
-    css: {
-        preprocessorOptions: {
-            less: {},
-        },
-    },
-    plugins: [
-        purgecss({
-            content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
-        })
-    ],
+  },
+  plugins: [
+    purgecss({
+      content: ["./index.html", "./src/**/*.js"],
+    }),
+  ],
 });
